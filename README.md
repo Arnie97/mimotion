@@ -1,51 +1,5 @@
 # mimotion
 小米运动刷步数 原github Squaregentleman被封 为了不耽误你们正常fork 我开了新号
-# 小米运动自动刷步数
-
-> 小米运动自动刷步数
-
-## Github Actions 部署指南
-
-### 一、Fork 此仓库
-
-### 二、设置账号密码
-> 添加名为  **PMODE**、**PKEY**、**USER**、**PWD**、**STEP** 的变量: Settings-->Secrets-->New secret  
-
-| Secrets |  格式  |
-| -------- | ----- |
-| PMODE |   推送模式,server酱推送:`wx` 新server酱推送:`nwx` tg推送:`tg` 企业微信推送:`qwx` PushPlus推送:`pp` 关闭推送:`off`|
-| PKEY |   推送key,详见PKEY参数解释|
-| USER |   账号,仅支持手机号|
-| PWD |   密码|
-| STEP |   步数:0则为1w-2w之间随机,自定义随机范围: `18000-25000`|
-
-| PKEY参数解释 |  格式  |
-| -------- | ----- |
-| TG推送 |   `token@userid`|
-| Server酱推送 |   `填写server酱的推送key`|
-| 企业微信推送 |   `推送用户（可@all）-corpid-corpsecret-(agentid 空则为默认1000002)`|
-| PushPlus推送 |   `token`|
-| 关闭推送 |   `留空即可`|
-
-### 三、多账户(用不上请忽略)
-
-多账户请用 **#** 分割 然后保存到变量 **USER** 和 **PWD**
-
-#### 例如
-
-**13800138000#13800138001** 变量 **USER**
-
-**abc123qwe#abcqwe2** 变量 **PWD**
-
-### 四、自定义启动时间
-
-编辑 **.github/workflows/run.yml**
-
-找到 cron: 0 10 * * *
-
-修改其中的10为你要的时间
-
-需要运行的时间-8就是UTC时间
 
 ## 注意事项
 
@@ -66,11 +20,3 @@
 8. TG推送教程 [点我](./TG_PUSH.md)
 
 9. 请注意，账号不是 [小米账号]，而是 [小米运动] 的账号。
-
-## 纪念一下往日的辉煌
-
-[![](https://i.loli.net/2021/11/19/BLi5cpjPSxh7Am2.png)](https://i.loli.net/2021/11/19/BLi5cpjPSxh7Am2.png)
-
-## 历史Star数
-
-[![Stargazers over time](https://starchart.cc/577fkj/mimotion.svg)](https://starchart.cc/577fkj/mimotion)
